@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Classification Result</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            animation: fadeInDown 7s ease-out;
+              
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        
+        td.left {
+            width: 50%;
+        }
+        
+        td.right {
+            width: 50%;
+        }
+        
+        h2 {
+            text-align: center;
+            animation: fadeInDown 4s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Document Classification Result</h1>
+    <h2>The document is classified as: {{ classification }}</h2>
+    <table>
+        <tr>
+            <th>Original Text</th>
+            <th>Preprocessed Text</th>
+        </tr>
+        <tr>
+            <td class="left">{{ original_text }}</td>
+            <td class="right">{{ preprocessed_text }}</td>
+        </tr>
+    </table>
+    <br>
+    
+</body>
+</html>
